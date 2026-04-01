@@ -10,7 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-
   <!-- ===================== NAVBAR ===================== -->
   <header class="navbar">
     <div class="nav-inner">
@@ -62,6 +61,44 @@
         </div>
       </div>
     </section>
+
+    <!-- ===================== QUOTES SECTION ===================== -->
+<section class="quotes-section">
+  <div class="quotes-inner">
+
+    <h2 class="section-heading">Reflect with Quotes</h2>
+
+    <!-- Search + Sort -->
+    <div class="quotes-controls">
+      <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="Search reflections..." 
+      />
+
+      <select id="sortSelect">
+        <option value="">Sort</option>
+        <option value="author">Author (A-Z)</option>
+        <option value="length">Quote Length</option>
+      </select>
+    </div>
+
+    <!-- Quotes Container -->
+    <div id="quotes-container"></div>
+
+  </div>
+</section>
+<!-- ===================== PROMPTS SECTION ===================== -->
+<section class="prompts-section">
+  <div class="quotes-inner">
+
+    <div class="section-label">Self Reflection</div>
+    <h2 class="section-heading">Guided Prompts</h2>
+
+    <div id="prompts-container"></div>
+
+  </div>
+</section>
 
     <!-- ===================== FEATURES ===================== -->
     <section class="features" id="features">
@@ -178,6 +215,6 @@
       <p class="footer-copy">Built for mindful self-reflection &nbsp;·&nbsp; Made with care</p>
     </div>
   </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>

@@ -653,3 +653,75 @@ img, svg {
     text-align: center;
   }
 }
+
+.quotes-section {
+  padding: var(--space-xl) var(--space-md);
+  background: var(--surface);
+}
+
+.quotes-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.quotes-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+#searchInput,
+#sortSelect {
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--border);
+  font-family: var(--font-body);
+  background: var(--white);
+}
+
+#searchInput {
+  flex: 1;
+}
+
+#quotes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.quote-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.quote-text {
+  font-style: italic;
+  margin-bottom: 0.6rem;
+}
+
+.quote-author {
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.prompts-section {
+  padding: var(--space-xl) var(--space-md);
+  background: var(--bg);
+}
+
+#prompts-container {
+  display: grid;
+  gap: 1rem;
+}
+
+.prompt-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 1.2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  font-style: italic;
+}
