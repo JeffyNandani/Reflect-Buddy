@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflect Buddy — My Favorites</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-dot"></span>
+        Reflect Buddy
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-outline dark-toggle" id="darkToggle" onclick="toggleDarkMode()">🌙 Dark</button>
+        <span class="nav-user" id="navUser"></span>
+        <button class="btn btn-outline" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </header>
+ 
+  <main>
+    <section class="quotes-section">
+      <div class="quotes-inner">
+        <div class="section-label">Saved by you</div>
+        <h2 class="section-heading">My Favorites ❤️</h2>
+ 
+        <p class="fav-hint">
+          Heart any quote on the <a href="quotes.html">Quotes page</a> to save it here.
+        </p>
+ 
+        <!-- Empty state message -->
+        <p id="emptyMsg" class="empty-msg hidden">
+          You haven't saved any favorites yet. Go explore some quotes!
+        </p>
+ 
+        <!-- Favorites Grid -->
+        <div id="favorites-container"></div>
+ 
+      </div>
+    </section>
+  </main>
+ 
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo footer-logo">
+        <span class="logo-dot"></span>
+        Reflect Buddy
+      </a>
+      <nav>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">Built for mindful self-reflection &nbsp;·&nbsp; Made with care</p>
+    </div>
+  </footer>
+ 
+  <script src="auth-check.js"></script>
+  <script src="dark-mode.js"></script>
+  <script src="favorites.js"></script>
+</body>
+</html>

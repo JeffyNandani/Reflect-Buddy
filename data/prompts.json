@@ -1,34 +1,10 @@
 [
-  {
-    "id": 1,
-    "text": "What emotion am I feeling right now, and where do I feel it in my body?"
-  },
-  {
-    "id": 2,
-    "text": "What drained my energy today — and what gave me energy?"
-  },
-  {
-    "id": 3,
-    "text": "How did this interaction make me feel, and what does that tell me about what I need?"
-  },
-  {
-    "id": 4,
-    "text": "What am I assuming that might not actually be true?"
-  },
-  {
-    "id": 5,
-    "text": "What is one small thing that went well today?"
-  },
-  {
-    "id": 6,
-    "text": "What would I do differently if I could redo today?"
-  },
-  {
-    "id": 7,
-    "text": "What is one thing I can be proud of today, even if it feels small?"
-  },
-  {
-    "id": 8,
-    "text": "What fear is quietly holding me back right now?"
-  }
+  { "text": "What emotion am I carrying most strongly right now?" },
+  { "text": "What is one thing I am proud of today, however small?" },
+  { "text": "Is there something I need to let go of?" },
+  { "text": "What does my inner voice say when everything is quiet?" },
+  { "text": "What do I need more of in my life right now?" },
+  { "text": "How did I show up for myself today?" },
+  { "text": "What am I avoiding that I know I should face?" },
+  { "text": "If I could tell my past self one thing, what would it be?" }
 ]

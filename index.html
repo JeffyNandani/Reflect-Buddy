@@ -10,27 +10,34 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
+ 
   <!-- ===================== NAVBAR ===================== -->
   <header class="navbar">
     <div class="nav-inner">
-      <a href="#" class="nav-logo">
+      <a href="index.html" class="nav-logo">
         <span class="logo-dot"></span>
         Reflect Buddy
       </a>
       <nav>
         <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Reflect</a></li>
-          <li><a href="#">Exercises</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
         </ul>
       </nav>
-      <a href="#" class="btn btn-outline">Begin</a>
+      <div class="nav-actions">
+        <!-- Dark mode toggle -->
+        <button class="btn btn-outline dark-toggle" id="darkToggle" onclick="toggleDarkMode()">🌙 Dark</button>
+        <!-- Logged in user name + logout -->
+        <span class="nav-user" id="navUser"></span>
+        <button class="btn btn-outline" onclick="logout()">Logout</button>
+      </div>
     </div>
   </header>
-
+ 
   <main>
-
+ 
     <!-- ===================== HERO ===================== -->
     <section class="hero">
       <div class="hero-content">
@@ -41,13 +48,13 @@
           <em>Understand yourself.</em>
         </h1>
         <p class="hero-sub">
-          MindSpace is your quiet corner on the internet — a gentle place
-          to journal, process emotions, and return to yourself.
+          Reflect Buddy is your quiet corner on the internet — a gentle place
+          to read quotes, explore prompts, and return to yourself.
         </p>
-        <a href="#" class="btn btn-primary">Start Reflecting</a>
+        <a href="quotes.html" class="btn btn-primary">Explore Quotes</a>
       </div>
-
-      <!-- Decorative illustration placeholder -->
+ 
+      <!-- Decorative illustration -->
       <div class="hero-illustration" aria-hidden="true">
         <div class="illus-ring illus-ring--lg"></div>
         <div class="illus-ring illus-ring--md"></div>
@@ -61,160 +68,90 @@
         </div>
       </div>
     </section>
-
-    <!-- ===================== QUOTES SECTION ===================== -->
-<section class="quotes-section">
-  <div class="quotes-inner">
-
-    <h2 class="section-heading">Reflect with Quotes</h2>
-
-    <!-- Search + Sort -->
-    <div class="quotes-controls">
-      <input 
-        type="text" 
-        id="searchInput" 
-        placeholder="Search reflections..." 
-      />
-
-      <select id="sortSelect">
-        <option value="">Sort</option>
-        <option value="author">Author (A-Z)</option>
-        <option value="length">Quote Length</option>
-      </select>
-    </div>
-
-    <!-- Quotes Container -->
-    <div id="quotes-container"></div>
-
-  </div>
-</section>
-<!-- ===================== PROMPTS SECTION ===================== -->
-<section class="prompts-section">
-  <div class="quotes-inner">
-
-    <div class="section-label">Self Reflection</div>
-    <h2 class="section-heading">Guided Prompts</h2>
-
-    <div id="prompts-container"></div>
-
-  </div>
-</section>
-
+ 
     <!-- ===================== FEATURES ===================== -->
     <section class="features" id="features">
       <div class="section-label">What you'll find here</div>
       <h2 class="section-heading">Tools for your inner world</h2>
-
+ 
       <div class="features-grid">
-
-        <!-- Card 1 -->
+ 
         <article class="feature-card">
           <div class="card-icon card-icon--blue">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
               <rect x="4" y="3" width="16" height="18" rx="3" stroke="currentColor" stroke-width="1.8"/>
               <path d="M8 8h8M8 12h6M8 16h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3 class="card-title">Journaling Prompts</h3>
+          <h3 class="card-title">Reflect with Quotes</h3>
           <p class="card-desc">
-            Thoughtful, carefully crafted questions that gently guide you
-            through your thoughts — no blank-page dread, just honest exploration.
+            Browse hundreds of mindful quotes. Search, sort, and save your
+            favorites to revisit whenever you need them.
           </p>
-          <span class="card-link">Explore prompts →</span>
+          <a href="quotes.html" class="card-link">Explore quotes →</a>
         </article>
-
-        <!-- Card 2 -->
+ 
         <article class="feature-card feature-card--accent">
           <div class="card-icon card-icon--teal">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
               <path d="M12 21C12 21 4 15.5 4 9.5C4 7.015 6.015 5 8.5 5C9.93 5 11.2 5.65 12 6.67C12.8 5.65 14.07 5 15.5 5C17.985 5 20 7.015 20 9.5C20 15.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
             </svg>
           </div>
-          <h3 class="card-title">Emotional Tracking</h3>
+          <h3 class="card-title">Saved Favorites</h3>
           <p class="card-desc">
-            Check in with your emotional landscape daily. Spot patterns,
-            acknowledge feelings, and build genuine self-awareness over time.
+            Heart any quote to add it to your personal favorites collection.
+            All saved locally — just for you.
           </p>
-          <span class="card-link">Track emotions →</span>
+          <a href="favorites.html" class="card-link">View favorites →</a>
         </article>
-
-        <!-- Card 3 -->
+ 
         <article class="feature-card">
           <div class="card-icon card-icon--indigo">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" width="22" height="22">
+            <svg viewBox="0 0 24 24" fill="none" width="22" height="22">
               <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.8"/>
               <path d="M12 8v4l3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
-          <h3 class="card-title">Stress Relief Exercises</h3>
+          <h3 class="card-title">Breathing Exercises</h3>
           <p class="card-desc">
-            Simple, science-backed breathing techniques and grounding exercises
-            designed to bring you back to the present moment gently.
+            Simple, guided breathing techniques to calm your mind and bring
+            you back to the present moment.
           </p>
-          <span class="card-link">Try an exercise →</span>
+          <a href="exercises.html" class="card-link">Try an exercise →</a>
         </article>
-
+ 
       </div>
     </section>
-
-    <!-- ===================== REFLECTION PREVIEW ===================== -->
-    <section class="reflection-section">
-      <div class="reflection-inner">
-        <div class="reflection-meta">
-          <div class="section-label">Today's Prompt</div>
-          <h2 class="section-heading">A question worth sitting with</h2>
-          <p class="reflection-desc">
-            Each day, MindSpace offers one gentle prompt. No pressure, no timer.
-            Just you and your thoughts.
-          </p>
-          <a href="#" class="btn btn-primary">Open My Journal</a>
-        </div>
-
-        <div class="journal-card">
-          <div class="journal-card__header">
-            <span class="journal-date">Tuesday · March 24</span>
-            <span class="journal-tag">Relationships</span>
-          </div>
-          <blockquote class="journal-prompt">
-            "How did this interaction make me feel today — and what does that say about what I need?"
-          </blockquote>
-          <div class="journal-lines" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
-          </div>
-          <div class="journal-card__footer">
-            <span class="journal-hint">✦ Begin writing below</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
+ 
     <!-- ===================== CTA STRIP ===================== -->
     <section class="cta-strip">
       <p class="cta-text">Your thoughts deserve a safe place to land.</p>
-      <a href="#" class="btn btn-primary">Start for free — no account needed</a>
+      <a href="quotes.html" class="btn btn-primary">Start Reflecting</a>
     </section>
-
+ 
   </main>
-
+ 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="footer-inner">
-      <a href="#" class="nav-logo footer-logo">
+      <a href="index.html" class="nav-logo footer-logo">
         <span class="logo-dot"></span>
-        MindSpace
+        Reflect Buddy
       </a>
       <nav>
         <ul class="footer-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Reflect</a></li>
-          <li><a href="#">Exercises</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Privacy</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
         </ul>
       </nav>
       <p class="footer-copy">Built for mindful self-reflection &nbsp;·&nbsp; Made with care</p>
     </div>
   </footer>
-  <script src="script.js"></script>
+ 
+  <script src="auth-check.js"></script>
+  <script src="dark-mode.js"></script>
 </body>
 </html>
+ 

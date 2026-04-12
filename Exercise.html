@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflect Buddy — Exercises</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="logo-dot"></span>
+        Reflect Buddy
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn btn-outline dark-toggle" id="darkToggle" onclick="toggleDarkMode()">🌙 Dark</button>
+        <span class="nav-user" id="navUser"></span>
+        <button class="btn btn-outline" onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== EXERCISES ===================== -->
+    <section class="quotes-section">
+      <div class="quotes-inner">
+        <div class="section-label">Calm Your Mind</div>
+        <h2 class="section-heading">Breathing Exercises</h2>
+        <p style="color: var(--subtext); margin-bottom: 2rem;">
+          Pick an exercise below and follow along at your own pace.
+        </p>
+
+        <div id="exercises-container" class="features-grid"></div>
+
+      </div>
+    </section>
+
+    <!-- ===================== ACTIVE EXERCISE ===================== -->
+    <section class="exercise-player hidden" id="exercisePlayer">
+      <div class="quotes-inner">
+        <h2 class="section-heading" id="playerTitle">Box Breathing</h2>
+        <p class="ex-desc" id="playerDesc"></p>
+
+        <!-- Big animated circle -->
+        <div class="breath-circle-wrap">
+          <div class="breath-circle" id="breathCircle">
+            <span id="breathLabel">Press Start</span>
+          </div>
+        </div>
+
+        <p class="breath-step-text" id="breathStepText"></p>
+
+        <div class="ex-controls">
+          <button class="btn btn-primary" id="startBtn" onclick="startExercise()">▶ Start</button>
+          <button class="btn btn-outline" onclick="stopExercise()">✕ Stop</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="index.html" class="nav-logo footer-logo">
+        <span class="logo-dot"></span>
+        Reflect Buddy
+      </a>
+      <nav>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quotes.html">Quotes</a></li>
+          <li><a href="exercises.html">Exercises</a></li>
+          <li><a href="favorites.html">Favorites</a></li>
+        </ul>
+      </nav>
+      <p class="footer-copy">Built for mindful self-reflection &nbsp;·&nbsp; Made with care</p>
+    </div>
+  </footer>
+
+  <script src="auth-check.js"></script>
+  <script src="dark-mode.js"></script>
+  <script src="exercises.js"></script>
+</body>
+</html>

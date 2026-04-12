@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reflect Buddy — Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="login.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+ 
+  <div class="login-page">
+ 
+    <!-- Left decorative panel -->
+    <div class="login-left" aria-hidden="true">
+      <div class="login-left__inner">
+        <div class="login-brand">
+          <span class="logo-dot"></span>
+          Reflect Buddy
+        </div>
+        <blockquote class="login-quote">
+          "The unexamined life is<br/>not worth living."
+          <cite>— Socrates</cite>
+        </blockquote>
+        <div class="login-rings">
+          <div class="l-ring l-ring--1"></div>
+          <div class="l-ring l-ring--2"></div>
+          <div class="l-ring l-ring--3"></div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- Right form panel -->
+    <div class="login-right">
+ 
+      <!-- Tab switcher -->
+      <div class="auth-tabs">
+        <button class="auth-tab auth-tab--active" id="tabLogin" onclick="showTab('login')">Login</button>
+        <button class="auth-tab" id="tabSignup" onclick="showTab('signup')">Sign Up</button>
+      </div>
+ 
+      <!-- LOGIN FORM -->
+      <div class="auth-form" id="loginForm">
+        <h1 class="auth-heading">Welcome back</h1>
+        <p class="auth-sub">Continue your reflection journey.</p>
+ 
+        <div class="form-group">
+          <label class="form-label" for="loginEmail">Email</label>
+          <input class="form-input" type="email" id="loginEmail" placeholder="you@example.com" />
+        </div>
+ 
+        <div class="form-group">
+          <label class="form-label" for="loginPassword">Password</label>
+          <input class="form-input" type="password" id="loginPassword" placeholder="••••••••" />
+        </div>
+ 
+        <p class="form-error" id="loginError"></p>
+ 
+        <button class="btn btn-primary auth-btn" onclick="handleLogin()">Login</button>
+ 
+        <p class="auth-switch">
+          Don't have an account?
+          <span class="auth-link" onclick="showTab('signup')">Sign up</span>
+        </p>
+      </div>
+ 
+      <!-- SIGNUP FORM -->
+      <div class="auth-form hidden" id="signupForm">
+        <h1 class="auth-heading">Create account</h1>
+        <p class="auth-sub">Start your journey inward.</p>
+ 
+        <div class="form-group">
+          <label class="form-label" for="signupName">Full Name</label>
+          <input class="form-input" type="text" id="signupName" placeholder="Your name" />
+        </div>
+ 
+        <div class="form-group">
+          <label class="form-label" for="signupEmail">Email</label>
+          <input class="form-input" type="email" id="signupEmail" placeholder="you@example.com" />
+        </div>
+ 
+        <div class="form-group">
+          <label class="form-label" for="signupPassword">Password</label>
+          <input class="form-input" type="password" id="signupPassword" placeholder="Min 6 characters" />
+        </div>
+ 
+        <p class="form-error" id="signupError"></p>
+        <p class="form-success" id="signupSuccess"></p>
+ 
+        <button class="btn btn-primary auth-btn" onclick="handleSignup()">Create Account</button>
+ 
+        <p class="auth-switch">
+          Already have an account?
+          <span class="auth-link" onclick="showTab('login')">Login</span>
+        </p>
+      </div>
+ 
+    </div>
+  </div>
+ 
+  <script src="login.js"></script>
+</body>
+</html>
